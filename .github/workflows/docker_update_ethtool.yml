@@ -4,18 +4,7 @@
 # support.
 name: Manually update antrea/ethtool Docker image
 
-on:
-  workflow_dispatch:
-    # It is unlikely that anyone will need to use non-default values for these inputs.
-    inputs:
-      antrea-ref:
-        description: 'The Git ref to use when checking-out the Antrea repository'
-        required: false
-        default: 'main'
-      docker-tag:
-        description: 'Tag for built Docker image'
-        required: false
-        default: 'latest'
+on: push
 
 jobs:
   build:
