@@ -122,7 +122,7 @@ if $PULL; then
     fi
     if [ "$DISTRO" == "ubuntu" ]; then
         IMAGES_LIST=(
-            "hirnimeshram/openvswitch-debs:$OVS_VERSION"
+            "antrea/openvswitch-debs:$OVS_VERSION"
             "antrea/openvswitch:$OVS_VERSION"
             "antrea/cni-binaries:$CNI_BINARIES_VERSION"
             "antrea/base-ubuntu:$OVS_VERSION"
