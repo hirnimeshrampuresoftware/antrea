@@ -59,7 +59,10 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-${{ env.go-cache-name }}-
     - name: Run unit tests
-      run: make test-unit
+      run: 
+        pwd
+        ls
+        make test-unit
     - name: Codecov
       uses: codecov/codecov-action@v3
       with:
@@ -101,7 +104,9 @@ jobs:
       run: |
             docker run --rm -v ${{ github.workspace }}:/ws:rw --workdir=/ws \
             arm64v8/ubuntu \
-            bash -exc 'make test-unit'
+            bash -exc 'pwd && \
+            ls && \
+            make test-unit'
     - name: Codecov
       uses: codecov/codecov-action@v3
       with:
